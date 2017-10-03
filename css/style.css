@@ -1,0 +1,11 @@
+h4 {
+    color: red !important;
+}
+
+.dropdown-item:focus, .dropdown-item:hover {
+     color: #1d1e1f !important;
+}
+
+.progress, .progress-bar {
+    border-radius: 0 !important;
+}
