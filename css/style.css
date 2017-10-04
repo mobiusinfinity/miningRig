@@ -27,3 +27,7 @@ th {
 #miner3_pwr .slider-selection {
 	background: #BABABA;
 }
+
+#search {
+	border: 1px solid #5cb85c;
+}

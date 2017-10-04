@@ -51,9 +51,15 @@
             <a href="#" class="nav-item nav-link">About</a>
          </div><!-- end navbar-nav navbar -->
 
-         <form class="navbar-form navbar-right" style="margin-top: 10px">
-           <input type="form-control" name="search" placeholder="Search">
-           <button class="btn btn-outline-success">GO</button>
+         <form class="navbar-form navbar-right form-group" style="margin-top: 10px">
+
+          <div class="input-group">
+            <input class="form-control" type="text" name="search" id="search" placeholder="Search for...">
+            <span class="input-group-btn">
+              <button class="btn btn-outline-success">GO</button>
+            </span>
+          </div>
+
          </form>
         </div>  <!-- end collapse -->
 
@@ -62,7 +68,7 @@
 
     <div class="jumbotron jumbotron-fluid text-center bg-success text-white">
       <h1>Cryptocurrency Mining Rig Settings</h1>
-      <p>I aint saying shes a gold digger...</p>
+      <p>Configure your rig to maximise performace and mine more coins!</p>
     </div>
 
     <!-- start bootstrap container // insert all content within here -->
@@ -119,7 +125,7 @@
             <td><input class="form-control" id="miner2_fan" type="text" value="80 80 80 80 80"></td>
            </tr>
            <tr>
-             <td><input class="form-control font-weight-bold" id="miner3_MinerID" type="text" value="f1810f" disabled></td>
+             <td><input class="form-control font-weight-bold" id="miner3_MinerID" type="text" value="73hfd5" disabled></td>
              <td>
                <div class="form-group">
                  <select class="form-control" style="min-width: 100px;" id="miner3_Driver">
@@ -138,19 +144,13 @@
          </tbody>
        </table>
        </div>
+   </div>
    <div class="container text-center mt-4">
     <button class="btn btn-primary" onclick="config()">Download Config File</button>
      <div class="form-group mt-4">
          <label for="exampleTextarea">Text output</label>
          <textarea class="form-control" id="outputText" rows="3"></textarea>
      </div>
-
-   </div>
-      <form action="#" method="post">
-          <table>
-            <th></th>
-          </table>
-      </form>
     </div>
 
     <!-- end bootstrap container -->
