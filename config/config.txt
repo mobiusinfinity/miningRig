@@ -1,26 +1,26 @@
 # -------------------------- Miner f1810f ----------------------------
-driver f1810f: nvidia
+driver f1810f: Radeon
 vlt f1810f 1000 1000 1000 1000 1000
-pwr f1810f 7 7 7 7 7 7
+pwr f1810f 9 9 9 9 9
 mem f1810f 5000 5000 5000 5000 5000
 miner f1810f ewbf-zcash
 flg f1810f --cl-local-work 256 --cl-global-work 8192 --farm-recheck 200
 fan f1810f 90 90 90 90 90
 
 # -------------------------- Miner 0004f6 ----------------------------
-driver 0004f6 radeon
+driver 0004f6 Nvidia
 vlt 0004f6 2000 2000 2000 2000 2000
-pwr 0004f6 8 8 8 8 8 8
+pwr 0004f6 9 9 9 9 9
 mem 0004f6 4200 4200 4200 4200 4200
 miner 0004f6 ewbf-zcash
 flg 0004f6 --cl-local-work 256 --cl-global-work 8192 --farm-recheck 200
 fan 0004f6 80 80 80 80 80
 
-# -------------------------- Miner 396592 ----------------------------
-driver 396592 nvidia
-vlt 396592 3000 3000 3000 3000 3000
-pwr 396592 9 9 9 9 9 9
-mem 396592 3200 3200 3200 3200 3200
-miner 396592 claymore-zcash
-flg 396592 --cl-local-work 256 --cl-global-work 8192 --farm-recheck 200
-fan 396592 100 100 100 100 100
+# -------------------------- Miner f1810f ----------------------------
+driver f1810f Radeon
+vlt f1810f 3000 3000 3000 3000 3000
+pwr f1810f 9 9 9 9 9
+mem f1810f 3200 3200 3200 3200 3200
+miner f1810f claymore-zcash
+flg f1810f --cl-local-work 256 --cl-global-work 8192 --farm-recheck 200
+fan f1810f 100 100 100 100 100

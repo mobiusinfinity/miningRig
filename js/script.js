@@ -1,42 +1,34 @@
 function config() {
 
+var  miner1_MinerID = document.querySelector("#miner1_MinerID").value;
+var  miner1_Driver 	= document.querySelector("#miner1_Driver").value;
+var  miner1_vlt 	= document.querySelector("#miner1_vlt").value;
+var  miner1_pwr		= document.querySelector("#miner1_pwr").value;
+var  miner1_mem 	= document.querySelector("#miner1_mem").value;
+var  miner1_miner 	= document.querySelector("#miner1_miner").value;
+var  miner1_flg 	= document.querySelector("#miner1_flg").value;
+var  miner1_fan 	= document.querySelector("#miner1_fan").value;
 
-  var  miner1_MinerID = document.querySelector("#miner1_MinerID").value;
-  var  miner1_Driver = document.querySelector("#miner1_Driver").value;
-  var  miner1_vlt = document.querySelector("#miner1_vlt").value;
-  var  miner1_pwr = document.querySelector("#miner1_pwr").value;
-  var  miner1_mem = document.querySelector("#miner1_mem").value;
-  var  miner1_miner = document.querySelector("#miner1_miner").value;
-  var  miner1_flg = document.querySelector("#miner1_flg").value;
-  var  miner1_fan = document.querySelector("#miner1_fan").value;
+var  miner2_MinerID = document.querySelector("#miner2_MinerID").value;
+var  miner2_Driver 	= document.querySelector("#miner2_Driver").value;
+var  miner2_vlt 	= document.querySelector("#miner2_vlt").value;
+var  miner2_pwr 	= document.querySelector("#miner2_pwr").value;
+var  miner2_mem 	= document.querySelector("#miner2_mem").value;
+var  miner2_miner 	= document.querySelector("#miner2_miner").value;
+var  miner2_flg 	= document.querySelector("#miner2_flg").value;
+var  miner2_fan 	= document.querySelector("#miner2_fan").value;
 
-  var  miner2_MinerID = document.querySelector("#miner2_MinerID").value;
-  var  miner2_Driver = document.querySelector("#miner2_Driver").value;
-  var  miner2_vlt = document.querySelector("#miner2_vlt").value;
-  var  miner2_pwr = document.querySelector("#miner2_pwr").value;
-  var  miner2_mem = document.querySelector("#miner2_mem").value;
-  var  miner2_miner = document.querySelector("#miner2_miner").value;
-  var  miner2_flg = document.querySelector("#miner2_flg").value;
-  var  miner2_fan = document.querySelector("#miner2_fan").value;
+var  miner3_MinerID = document.querySelector("#miner3_MinerID").value;
+var  miner3_Driver 	= document.querySelector("#miner3_Driver").value;
+var  miner3_vlt 	= document.querySelector("#miner3_vlt").value;
+var  miner3_pwr 	= document.querySelector("#miner3_pwr").value;
+var  miner3_mem 	= document.querySelector("#miner3_mem").value;
+var  miner3_miner 	= document.querySelector("#miner3_miner").value;
+var  miner3_flg 	= document.querySelector("#miner3_flg").value;
+var  miner3_fan 	= document.querySelector("#miner3_fan").value;
 
-  var  miner3_MinerID = document.querySelector("#miner3_MinerID").value;
-  var  miner3_Driver = document.querySelector("#miner3_Driver").value;
-  var  miner3_vlt = document.querySelector("#miner3_vlt").value;
-  var  miner3_pwr = document.querySelector("#miner3_pwr").value;
-  var  miner3_mem = document.querySelector("#miner3_mem").value;
-  var  miner3_miner = document.querySelector("#miner3_miner").value;
-  var  miner3_flg = document.querySelector("#miner3_flg").value;
-  var  miner3_fan = document.querySelector("#miner3_fan").value;
+var  textArea 		= document.getElementById("outputText");
 
-  var  textArea = document.getElementById("outputText");
-
-
-//   var urlString = `
-// id1=${miner1_MinerID} -
-// driver1${miner1_Driver} -
-// vlt1${miner1_vlt} -
-// pwr1${miner1_pwr} -
-// `;
 function downloadURI(uri, name)
 {
     var link = document.createElement("a");
@@ -45,8 +37,6 @@ function downloadURI(uri, name)
     link.click();
 }
 
-
- console.log(miner1_MinerID);
 
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
@@ -88,3 +78,4 @@ function downloadURI(uri, name)
     +"&fa3="+ miner3_fan, true);
     xhttp.send();
 }
+
