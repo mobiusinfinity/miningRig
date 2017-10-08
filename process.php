@@ -56,7 +56,7 @@ flg $id3 $fl3
 fan $id3 $fa3
 ";
 
-$myfile = fopen("config/config.txt", "w") or die("Unable to open file!");
+$myfile = fopen("config/config.txt", "w") or die("Unable to open file homie. Maybe file permissions on server too strict for root directory.");
 fwrite($myfile, $string);
 fclose($myfile);
 

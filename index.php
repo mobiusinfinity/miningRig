@@ -34,117 +34,163 @@
 
     <title>Title</title>
 </head>
-    <nav class="navbar bg-inverse navbar-inverse navbar-toggleable-md sticky-top">
-      <div class="container">
-        <a href="#" class="navbar-brand">
-            <img src="./assets/logo.png" width="60" style="text">
-            Miner Settings
-        </a>
-        <button class="navbar-toggler navbar-toggler-right-sm float-right mt-2" type="button" data-toggle="collapse" data-target="#myContent">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+<nav class="navbar bg-inverse navbar-inverse navbar-toggleable-md sticky-top">
+  <div class="container">
+    <a href="#" class="navbar-brand">
+        <img src="./assets/logo.png" width="60" style="text">
+        Miner Settings
+    </a>
+    <button class="navbar-toggler navbar-toggler-right-sm float-right mt-2" type="button" data-toggle="collapse" data-target="#myContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-       <div class="collapse navbar-collapse" id="myContent">
-        <div class="navbar-nav navbar mr-auto">
-           <a href="#" class="nav-item nav-link active">Home</a>
-            <a href="#" class="nav-item nav-link">Contact</a>
-            <a href="#" class="nav-item nav-link">About</a>
-         </div><!-- end navbar-nav navbar -->
+   <div class="collapse navbar-collapse" id="myContent">
+    <div class="navbar-nav navbar mr-auto">
+       <a href="#" class="nav-item nav-link active">Home</a>
+        <a href="#" class="nav-item nav-link">Contact</a>
+        <a href="#" class="nav-item nav-link">About</a>
+     </div><!-- end navbar-nav navbar -->
 
-         <form class="navbar-form navbar-right form-group" style="margin-top: 10px">
+     <form class="navbar-form navbar-right form-group" style="margin-top: 10px">
 
-          <div class="input-group">
-            <input class="form-control" type="text" name="search" id="search" placeholder="Search for...">
-            <span class="input-group-btn">
-              <button class="btn btn-outline-success">GO</button>
-            </span>
-          </div>
+      <div class="input-group">
+        <input class="form-control" type="text" name="search" id="search" placeholder="Search for...">
+        <span class="input-group-btn">
+          <button class="btn btn-outline-success">GO</button>
+        </span>
+      </div>
 
-         </form>
-        </div>  <!-- end collapse -->
+     </form>
+    </div>  <!-- end collapse -->
 
-      </div> <!-- end container -->
-    </nav>
+  </div> <!-- end container -->
+</nav>
 
-    <div class="jumbotron jumbotron-fluid text-center bg-success text-white">
-      <h1>Cryptocurrency Mining Rig Settings</h1>
-      <p>Configure your rig to maximise performace and mine more coins!</p>
-    </div>
+<div class="jumbotron jumbotron-fluid text-center bg-success text-white">
+  <h1>Cryptocurrency Mining Rig Settings</h1>
+  <p>Configure your rig to maximise performace and mine more coins!</p>
+</div>
 
+<div class="container-fluid mb-5">
+
+    <!-- Modified by Alex to add dynimac data from CURL-->
+
+    <?php
+    //first fetch main miner address from GET parameter if present in URL and show config table with the rest of the page
+    //otherwise - display message Cannot find specified ETHOS ID
+
+    $ethos_id = isset($_GET['id']) ? $_GET['id'] : '165d38';
+
+    if($ethos_id){
+
+    //ok, so now lets make API call to fetch the data.
+
+    $curl = curl_init();
+
+    curl_setopt_array($curl, array(
+      CURLOPT_URL => "http://".$ethos_id.".ethosdistro.com/?json=yes",
+      CURLOPT_RETURNTRANSFER => true,
+      CURLOPT_ENCODING => "",
+      CURLOPT_MAXREDIRS => 10,
+      CURLOPT_TIMEOUT => 30,
+      CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+      CURLOPT_CUSTOMREQUEST => "GET"
+    ));
+
+    $response = curl_exec($curl);
+    $err = curl_error($curl);
+
+
+
+    curl_close($curl);
+    //ideally we need first make a call and see if ethosID is valid, and/or we're not getting errors, but for now I'll omit this part
+    if ($err) {
+      echo "cURL Error #:" . $err;
+    } else {
+
+      //add square brackets to response so that silly PHP can expplode jason data into array
+        $alldata = json_decode('['.$response.']', true);
+
+      //   jason data translates into following data/arrays
+      //   alldata[0] - array containg entire response
+      //   alldata[0][rigs] - 2 dimensional array [rig name][rig statistics]
+      //   alldata[0][total_hash] - value
+      //   alldata[0][alive_gpus]  - value
+      //   alldata[0][total_gpus] - value
+      //   alldata[0][alive_rigs] - value
+      //   alldata[0][total_rigs] - value
+      //   alldata[0][current_version] - value
+      //   alldata[0][avg_temp] - value
+      //   alldata[0][capacity] - value
+      //   alldata[0][per_info] - 2 dimensional array [miner name][miner statistics]
+
+      // echo raw jason
+      // echo $response;
+
+    }
+  }
+  //for now I'm just spitting raw HTML inside php, but we should rather have proper HTML wraping
+  else{
+    echo "Cannot find your ethOS ID! Please make sure you have added it to URL.";
+  }
+  ?>
+  <div class="summary_wrapper">
     <!-- start bootstrap container // insert all content within here -->
+    <?php
+        //summary - per_info
+      $summary = $alldata[0]["per_info"];
+      foreach($summary as $algo_miner=>$sum_info){
+    ?>
+    <div class="summary_block_<?= ($algo_miner) ?>">
+      <h3 class="miner_summary_head_<?= $algo_miner; ?>"><?= ($algo_miner=='claymore'||$algo_miner=='ethermine'?'Ethereum':'ZCash'); ?> </h3>
+      <h5>Total Hash: <?= $sum_info["hash"]." ".($algo_miner=='claymore'?'MH/s':'Sol/s'); ?></h5>
+      <h5>Total Rigs: <?= $sum_info["per_total_rigs"]; ?></h5>
+      <h5>Offline: <?= $sum_info["per_total_rigs"]-$sum_info["per_alive_rigs"]; ?></h5>
+      <span>Checked at: <?= date('H:i d/m', $sum_info["current_time"]); ?></span>
+    </div> <!-- block summary end -->
 
-  <div class="container-fluid mb-5">
+    <?php
+      }
+    ?>
+  </div> <!-- summary wrapper end -->
 
-     <div class="table-responsive">
-       <table class="table table-striped">
-         <thead>
-           <tr>
-             <th>Miner ID</th>
-             <th>Driver</th>
-             <th>Voltage</th>
-             <th>Power</th>
-             <th>Memory</th>
-             <th>Miner</th>
-             <th>Flag</th>
-             <th>Fan</th>
-           </tr>
-         </thead>
-         <tbody>
-          <tr>
-            <td><input class="form-control  font-weight-bold" id="miner1_MinerID" type="text" value="f1810f" disabled></td>
-            <td>
-              <div class="form-group">
-                <select class="form-control" style="min-width: 100px;" id="miner1_Driver">
-                  <option>Nvidia</option>
-                  <option>Radeon</option>
-                </select>
-              </div>
-            </td>
-            <td><input class="form-control" id="miner1_vlt" type="text" value="1000 1000 1000 1000 1000"></td>
-            <td><input class="form-control" id="miner1_pwr" type="text" value="9 9 9 9 9">
-            <td><input class="form-control" id="miner1_mem" type="text" value="5000 5000 5000 5000 5000"></td>
-            <td><input class="form-control" id="miner1_miner" type="text" value="ewbf-zcash"></td>
-            <td><input class="form-control" id="miner1_flg" type="text" value="--cl-local-work 256 --cl-global-work 8192 --farm-recheck 200"></td>
-            <td><input class="form-control" id="miner1_fan" type="text" value="90 90 90 90 90"></td>
-          </tr>
-          <tr>
-            <td><input class="form-control font-weight-bold" id="miner2_MinerID" type="text" value="0004f6" disabled></td>
-            <td>
-              <div class="form-group">
-                <select class="form-control" style="min-width: 100px;" id="miner2_Driver">
-                  <option>Nvidia</option>
-                  <option>Radeon</option>
-                </select>
-              </div>
-            </td>
-            <td><input class="form-control" id="miner2_vlt" type="text" value="2000 2000 2000 2000 2000"></td>
-            <td><input class="form-control" id="miner2_pwr" type="text" value="9 9 9 9 9"></td>
-            <td><input class="form-control" id="miner2_mem" type="text" value="4200 4200 4200 4200 4200"></td>
-            <td><input class="form-control" id="miner2_miner" type="text" value="ewbf-zcash"></td>
-            <td><input class="form-control" id="miner2_flg" type="text" value="--cl-local-work 256 --cl-global-work 8192 --farm-recheck 200"></td>
-            <td><input class="form-control" id="miner2_fan" type="text" value="80 80 80 80 80"></td>
-           </tr>
-           <tr>
-             <td><input class="form-control font-weight-bold" id="miner3_MinerID" type="text" value="73hfd5" disabled></td>
-             <td>
-               <div class="form-group">
-                 <select class="form-control" style="min-width: 100px;" id="miner3_Driver">
-                   <option selected>Nvidia</option>
-                   <option>Radeon</option>
-                 </select>
-               </div>
-             </td>
-             <td><input class="form-control" id="miner3_vlt" type="text" value="3000 3000 3000 3000 3000"></td>
-             <td><input class="form-control" id="miner3_pwr" type="text" value="9 9 9 9 9"></td>
-             <td><input class="form-control" id="miner3_mem" type="text" value="3200 3200 3200 3200 3200"></td>
-             <td><input class="form-control" id="miner3_miner" type="text" value="claymore-zcash"></td>
-             <td><input class="form-control" id="miner3_flg" type="text" value="--cl-local-work 256 --cl-global-work 8192 --farm-recheck 200"></td>
-             <td><input class="form-control" id="miner3_fan" type="text" value="100 100 100 100 100"></td>
-           </tr>
-         </tbody>
-       </table>
-       </div>
+ <div class="table-responsive">
+   <table class="table table-striped">
+     <thead>
+       <tr>
+         <th>Miner ID</th>
+         <th>Driver</th>
+         <th>Voltage</th>
+         <th>Power</th>
+         <th>Memory</th>
+         <th>Miner</th>
+         <th>Flag</th>
+         <th>Fan</th>
+       </tr>
+     </thead>
+     <tbody>
+               <!-- Display Rigs Info insid e table -->
+        <?php
+  $allrigs = $alldata[0]["rigs"];
+  // display all rig stats in the long list
+  foreach($allrigs as $rigname=>$rigstats){ ?>
+    <tr>
+      <td><input class="form-control font-weight-bold" id="<?= $rigname ?>_MinerID" type="text" value="<?= $rigname ?>" disabled></td>
+      <td><input class="form-control" id="<?= $rigname ?>_driver" type="text" value="<?= $rigstats["driver"] ?>"> </td>
+      <td><input class="form-control" id="<?= $rigname ?>_vlt" type="text" value="<?= $rigstats["voltage"] ?>"></td>
+      <td><input class="form-control" id="<?= $rigname ?>_pwr" type="text" value="<?= $rigstats["powertune"] ?>">
+      <td><input class="form-control" id="<?= $rigname ?>_mem" type="text" value="<?= $rigstats["mem"] ?>"></td>
+      <td><input class="form-control" id="<?= $rigname ?>_miner" type="text" value="<?= $rigstats["miner"] ?>"></td>
+      <td><input class="form-control" id="<?= $rigname ?>_flg" type="text" value="<?= $rigstats["core"] ?>"></td>
+      <td><input class="form-control" id="<?= $rigname ?>_fan" type="text" value="<?= $rigstats["fanrpm"] ?>"></td>
+    </tr>
+
+  <?php } ?>
+
+     </tbody>
+   </table>
    </div>
+</div>
    <div class="container text-center mt-4">
     <button class="btn btn-primary" onclick="config()">Download Config File</button>
      <div class="form-group mt-4">
