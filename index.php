@@ -1,3 +1,14 @@
+<?php
+
+  if (isset($_GET['id'])) {
+    $ethos_id = $_GET['id'];
+  } else {
+    header("location:./login.php");
+    exit();
+  }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,7 +47,7 @@
 </head>
 <nav class="navbar bg-inverse navbar-inverse navbar-toggleable-md sticky-top">
   <div class="container">
-    <a href="#" class="navbar-brand">
+    <a href="index.php" class="navbar-brand">
         <img src="./assets/logo.png" width="60" style="text">
         Miner Settings
     </a>
@@ -46,9 +57,11 @@
 
    <div class="collapse navbar-collapse" id="myContent">
     <div class="navbar-nav navbar mr-auto">
-       <a href="#" class="nav-item nav-link active">Home</a>
+       <a href="index.php" class="nav-item nav-link active">Home</a>
         <a href="#" class="nav-item nav-link">Contact</a>
         <a href="#" class="nav-item nav-link">About</a>
+        <a href="login.php" class="nav-item nav-link">Login</a>
+
      </div><!-- end navbar-nav navbar -->
 
      <form class="navbar-form navbar-right form-group" style="margin-top: 10px">
@@ -79,10 +92,11 @@
     //first fetch main miner address from GET parameter if present in URL and show config table with the rest of the page
     //otherwise - display message Cannot find specified ETHOS ID
 
-    $ethos_id = isset($_GET['id']) ? $_GET['id'] : '165d38';
+    // $ethos_id = isset($_GET['id']) ? $_GET['id'] : '165d38';
 
     if($ethos_id){
 
+      // $ethos_id = "165d38";
     //ok, so now lets make API call to fetch the data.
 
     $curl = curl_init();
@@ -105,7 +119,10 @@
     curl_close($curl);
     //ideally we need first make a call and see if ethosID is valid, and/or we're not getting errors, but for now I'll omit this part
     if ($err) {
-      echo "cURL Error #:" . $err;
+      echo "<div class='container text-center'>
+                       <p>cURL Error #:" . $err . "</p>
+               </div>";
+      exit();
     } else {
 
       //add square brackets to response so that silly PHP can expplode jason data into array
@@ -126,6 +143,14 @@
 
       // echo raw jason
       // echo $response;
+        if (!$alldata || $err) {
+          echo "
+                <div class='container text-center'>
+                       <p>ERROR! cannot find ethos id</p>
+               </div>
+          ";
+          exit();
+        }
 
     }
   }
@@ -134,22 +159,29 @@
     echo "Cannot find your ethOS ID! Please make sure you have added it to URL.";
   }
   ?>
-  <div class="summary_wrapper">
+  <div class="summary_wrapper row">
+
     <!-- start bootstrap container // insert all content within here -->
     <?php
         //summary - per_info
-      $summary = $alldata[0]["per_info"];
+
+      if ($alldata) {
+        # code...
+        $summary = $alldata[0]["per_info"];
+
       foreach($summary as $algo_miner=>$sum_info){
     ?>
-    <div class="summary_block_<?= ($algo_miner) ?>">
-      <h3 class="miner_summary_head_<?= $algo_miner; ?>"><?= ($algo_miner=='claymore'||$algo_miner=='ethermine'?'Ethereum':'ZCash'); ?> </h3>
-      <h5>Total Hash: <?= $sum_info["hash"]." ".($algo_miner=='claymore'?'MH/s':'Sol/s'); ?></h5>
-      <h5>Total Rigs: <?= $sum_info["per_total_rigs"]; ?></h5>
-      <h5>Offline: <?= $sum_info["per_total_rigs"]-$sum_info["per_alive_rigs"]; ?></h5>
-      <span>Checked at: <?= date('H:i d/m', $sum_info["current_time"]); ?></span>
-    </div> <!-- block summary end -->
+      <div class="col row-item summary_block_<?= ($algo_miner) ?>">
+        <h3 class="miner_summary_head_<?= $algo_miner; ?>"><?= ($algo_miner=='claymore'||$algo_miner=='ethermine'?'Ethereum':'ZCash'); ?> </h3>
+        <h5>Total Hash: <?= $sum_info["hash"]." ".($algo_miner=='claymore'?'MH/s':'Sol/s'); ?></h5>
+        <h5>Total Rigs: <?= $sum_info["per_total_rigs"]; ?></h5>
+        <h5>Offline: <?= $sum_info["per_total_rigs"]-$sum_info["per_alive_rigs"]; ?></h5>
+        <span>Checked at: <?= date('H:i d/m', $sum_info["current_time"]); ?></span>
+      </div> <!-- block summary end -->
 
     <?php
+      }
+
       }
     ?>
   </div> <!-- summary wrapper end -->
@@ -171,6 +203,7 @@
      <tbody>
                <!-- Display Rigs Info insid e table -->
         <?php
+        if ($alldata) {
   $allrigs = $alldata[0]["rigs"];
   // display all rig stats in the long list
   foreach($allrigs as $rigname=>$rigstats){ ?>
@@ -185,7 +218,9 @@
       <td><input class="form-control" id="<?= $rigname ?>_fan" type="text" value="<?= $rigstats["fanrpm"] ?>"></td>
     </tr>
 
-  <?php } ?>
+  <?php }
+    }
+   ?>
 
      </tbody>
    </table>
