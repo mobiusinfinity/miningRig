@@ -14,6 +14,9 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
     <!-- link to local css stylesheet -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+
     <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
 
     <!-- JAVASCRIPT START -->
@@ -49,7 +52,13 @@
        <a href="index.php" class="nav-item nav-link active">Home</a>
         <a href="#" class="nav-item nav-link">Contact</a>
         <a href="#" class="nav-item nav-link">About</a>
-        <a href="logout.php" class="nav-item nav-link">Login</a>
+
+        <?php
+
+        if ($_SERVER['REQUEST_URI'] != "/rigSettings/login.php") {
+            echo "<a href='logout.php' class='nav-item nav-link'>Logout</a>";
+          }
+        ?>
 
      </div><!-- end navbar-nav navbar -->
 

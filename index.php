@@ -10,25 +10,23 @@
 
 <?php require './inc/header.php'; ?>
 
-<div class="jumbotron jumbotron-fluid text-center bg-success text-white mb-0">
-  <h1>Cryptocurrency Mining Rig Settings</h1>
-  <p>Configure your rig to maximise performace and mine more coins!</p>
-</div>
+<?php require './inc/jumbotron.php'; ?>
 
 <div class="container-fluid">
 
     <!-- Modified by Alex to add dynimac data from CURL-->
 
     <?php
-    //first fetch main miner address from GET parameter if present in URL and show config table with the rest of the page
-    //otherwise - display message Cannot find specified ETHOS ID
+
+    // first fetch main miner address from GET parameter if present in URL and show config table with the rest of the page
+    // otherwise - display message Cannot find specified ETHOS ID
 
     // $ethos_id = isset($_GET['id']) ? $_GET['id'] : '165d38';
 
     if($ethos_id){
 
-      // $ethos_id = "165d38";
-    //ok, so now lets make API call to fetch the data.
+    // $ethos_id = "165d38";
+    // ok, so now lets make API call to fetch the data.
 
     $curl = curl_init();
 
