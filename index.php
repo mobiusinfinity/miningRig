@@ -79,12 +79,12 @@
   </div> <!-- end container -->
 </nav>
 
-<div class="jumbotron jumbotron-fluid text-center bg-success text-white">
+<div class="jumbotron jumbotron-fluid text-center bg-success text-white mb-0">
   <h1>Cryptocurrency Mining Rig Settings</h1>
   <p>Configure your rig to maximise performace and mine more coins!</p>
 </div>
 
-<div class="container-fluid mb-5">
+<div class="container-fluid">
 
     <!-- Modified by Alex to add dynimac data from CURL-->
 
@@ -159,7 +159,7 @@
     echo "Cannot find your ethOS ID! Please make sure you have added it to URL.";
   }
   ?>
-  <div class="summary_wrapper row">
+  <div class="summary_wrapper row text-center">
 
     <!-- start bootstrap container // insert all content within here -->
     <?php
@@ -171,13 +171,15 @@
 
       foreach($summary as $algo_miner=>$sum_info){
     ?>
-      <div class="col row-item summary_block_<?= ($algo_miner) ?>">
-        <h3 class="miner_summary_head_<?= $algo_miner; ?>"><?= ($algo_miner=='claymore'||$algo_miner=='ethermine'?'Ethereum':'ZCash'); ?> </h3>
-        <h5>Total Hash: <?= $sum_info["hash"]." ".($algo_miner=='claymore'?'MH/s':'Sol/s'); ?></h5>
-        <h5>Total Rigs: <?= $sum_info["per_total_rigs"]; ?></h5>
-        <h5>Offline: <?= $sum_info["per_total_rigs"]-$sum_info["per_alive_rigs"]; ?></h5>
-        <span>Checked at: <?= date('H:i d/m', $sum_info["current_time"]); ?></span>
-      </div> <!-- block summary end -->
+      <div class="card col m-4 bg-warning">
+        <div class="card-block summary_block_<?= ($algo_miner) ?>">
+              <h3 class="card-title miner_summary_head_<?= $algo_miner; ?>"><?= ($algo_miner=='claymore'||$algo_miner=='ethermine'?'Ethereum':'ZCash'); ?> </h3>
+              <h5>Total Hash: <?= $sum_info["hash"]." ".($algo_miner=='claymore'?'MH/s':'Sol/s'); ?></h5>
+              <h5>Total Rigs: <?= $sum_info["per_total_rigs"]; ?></h5>
+              <h5>Offline: <?= $sum_info["per_total_rigs"]-$sum_info["per_alive_rigs"]; ?></h5>
+              <span>Checked at: <?= date('H:i d/m', $sum_info["current_time"]); ?></span>
+            </div> <!-- block summary end -->
+        </div>
 
     <?php
       }

@@ -134,7 +134,7 @@
                     }
                 }
             };
-            xhttp.open("GET", "curl.php?id="+ idValue, true);
+            xhttp.open("GET", "./curl.php?id="+ idValue, true);
             xhttp.send();
 
         } else if (formGroup.classList.contains("has-success")){
