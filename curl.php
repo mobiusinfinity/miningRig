@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 if (isset($_GET['id'])) {
   $ethos_id = $_GET['id'];
@@ -31,6 +32,8 @@ if (isset($_GET['id'])) {
     if (!$alldata || $err) {
       echo "Error";
       exit();
+    } else {
+      $_SESSION["id"] = $ethos_id;
     }
   }
 
