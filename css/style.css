@@ -43,11 +43,16 @@ th {
   position: absolute;
   padding: 10px;
   pointer-events: none;
+  text-align: center;
 }
 
 /* align icon */
 .left-addon .fa-spinner  { left:  0px;}
-.right-addon .fa-spinner { right: 0px;}
+.right-addon .fa-spinner {
+	right: 0px;
+	top: calc(25%);
+	font-size: 20px;
+}
 
 /* add padding  */
 .left-addon input  { padding-left:  30px; }
@@ -76,4 +81,13 @@ th {
         -webkit-transform: rotate(359deg);
         transform: rotate(359deg);
     }
+}
+@font-face {
+    font-family: digital;
+    src: url(DS-DIGI.TTF);
+    font-weight: normal;
+}
+#id {
+	font-size: 50px;
+	font-family: digital;
 }
