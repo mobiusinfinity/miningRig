@@ -1,11 +1,12 @@
+globalpowertune 6 
 maxgputemp 80 
-globalminer jkdkls ddsfjk;lds 
 globalfan 85 
-stratumproxy disabled 
+stratumproxy enabled 
 
 #-396592- ---- 396592 ---- -------------- 396592 ---------------- 
 driver 396592 amdgpu 
 cor 396592 1430 1430 1430 1430 1430 
+mem 396592 2200 2200 2200 2200 2200 
 vlt 396592 1000 1000 1000 1000 1000 
 pwr 396592 50 50 50 50 50 
 flg 396592 --color 1 --dcri 20 --cl-local-work 256 --cl-global-work 8192 --farm-recheck 200 
@@ -31,15 +32,15 @@ fan 0004f6 80 80 80 80 80 80
 reb 0004f6 3 
 
 #-claymore-zcash- -claymore-zcash- -------------- claymore-zcash ---------------- 
-claymore-zcash proxypool1 zec-us-west1.nanopool.org:6666 
-claymore-zcash proxypool2 zec-us-east1.nanopool.org:6666 
-claymore-zcash proxywallet t1gyHq8JpCLNF6Tqk6YwpbTq6hF3MTq5f9t 
-claymore-zcash poolpass1 x 
-claymore-zcash poolpass2 x 
+claymore-zcash=proxypool1 zec-us-west1.nanopool.org:6666 
+claymore-zcash=proxypool2 zec-us-east1.nanopool.org:6666 
+claymore-zcash=proxywallet t1gyHq8JpCLNF6Tqk6YwpbTq6hF3MTq5f9t 
+claymore-zcash=poolpass1 x 
+claymore-zcash=poolpass2 x 
 
 #-ewbf-zcash- -ewbf-zcash- -------------- ewbf-zcash ---------------- 
-ewbf-zcash proxypool1 zec-us-west1.nanopool.org:6666 
-ewbf-zcash proxypool2 zec-us-east1.nanopool.org:6666 
-ewbf-zcash proxywallet t1V8Q6qF7HEJShUCkGfk4rfTKzaJ1VnoMRD 
-ewbf-zcash poolpass1 x 
-ewbf-zcash poolpass2 x 
+ewbf-zcash=proxypool1 zec-us-west1.nanopool.org:6666 
+ewbf-zcash=proxypool2 zec-us-east1.nanopool.org:6666 
+ewbf-zcash=proxywallet t1V8Q6qF7HEJShUCkGfk4rfTKzaJ1VnoMRD 
+ewbf-zcash=poolpass1 x 
+ewbf-zcash=poolpass2 x 

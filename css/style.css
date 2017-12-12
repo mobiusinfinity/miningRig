@@ -39,7 +39,7 @@ th {
 
 /* style icon */
 .inner-addon .fa-spinner {
-	display: none;
+	visibility: hidden;
   position: absolute;
   padding: 10px;
   pointer-events: none;
@@ -91,3 +91,62 @@ th {
 	font-size: 50px;
 	font-family: digital;
 }
+.settingsInput, .poolInput {
+    width: 100%;
+}
+
+/*input.driver {
+    max-width: 300px !important;
+    width: 300px !important;
+    /* width: 500px; */
+/*}*/
+
+
+input.pwr, input.fan, input.mem, input.vlt, input.reb, input.cor, input.x, input.mxt, input.sel, input.x, input.maxgputemp, input.globalcore, input.globalmem, input.globalfan, input.globalpowertune, input.loc {
+    max-width: 80px !important;
+    width: 80px !important;
+    width: auto;
+    float: left;
+    margin-right:5px;
+}
+input.flg, input.flags {
+     max-width: 200px !important;
+     width: 200px !important;
+     width: auto;
+     float: left;
+     margin-right:5px;
+
+}
+.select, input.miner {
+    max-width: 165px !important;
+    width: 165px !important;
+}
+#containerUpload {
+    width: 850px;
+}
+
+#myBtn {
+ display: block;
+ width: 100px;
+ margin: 10px auto;
+}
+
+#result-modal {
+  padding: 0px;
+}
+
+#modal {
+  width: 800px;
+  margin: 0 auto;
+}
+
+/*.add, .close {
+  padding: 0;
+  float: left;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  opacity: .5;
+}*/

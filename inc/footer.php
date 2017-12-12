@@ -1,14 +1,14 @@
 
     <!-- end bootstrap container -->
     <!-- bootstrap js files start -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
     <!-- bootstrap js files end -->
 
     <script type="text/javascript">
 
-      $("#id").on("change paste keyup blur", function() {
+      $("#id").on("paste keyup", function() {
 
       		var spinner = document.querySelector("#spinner");
           var submit = document.querySelector("#submit");
@@ -21,7 +21,7 @@
             var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function() {
 	            	if (this.readyState != 4) {
-	            				spinner.style.display = "block";
+	            				spinner.style.visibility = "visible";
 	            			if (formGroup.classList.contains("has-danger")){
 	            			   formGroup.classList.remove("has-danger");
 	            			}
@@ -38,7 +38,7 @@
 	            	}
                 if (this.readyState == 4 && this.status == 200) {
 
-                	spinner.style.display = "none";
+                	spinner.style.visibility = "hidden";
 
                  // document.querySelector("#div1").innerHTML = this.response;
 
@@ -92,8 +92,23 @@
           });
       });
 
-    </script>
 
+      function globals(){
+
+        $( "#result-modal" ).load( "globals.php", function() {
+
+        });
+      }
+
+      function miners(minerID){
+        // alert(minerID);
+
+        $( "#result-modal-miner" ).load( "miners.php?minerID=" + minerID, function() {
+
+        });
+      }
+
+    </script>
 
 </body>
 </html>

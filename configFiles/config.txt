@@ -1,24 +1,27 @@
-maxgputemp 80 
-globalminer jkdkls ddsfjk;lds 
-globalfan 85 
-stratumproxy disabled 
+globalpowertune 10 
+maxgputemp 90 
+globalfan 90 
+stratumproxy enabled 
+maxgputemp 100 
 
 #-396592- ---- 396592 ---- -------------- 396592 ---------------- 
-driver 396592 amdgpu 
-cor 396592 1430 1430 1430 1430 1430 
-vlt 396592 1000 1000 1000 1000 1000 
-pwr 396592 50 50 50 50 50 
-flg 396592 --color 1 --dcri 20 --cl-local-work 256 --cl-global-work 8192 --farm-recheck 200 
+cor 396592 1431 1430 1430 1430 1430 
+vlt 396592 1003 1000 1000 1000 1000 
+pwr 396592 55 50 50 50 52 
+flg 396592 --cl-local-work 256 --cl-global-work 8192 --farm-recheck 200 
 miner 396592 claymore-zcash 
+driver 396592 amdgpu 
+mem 396592 4000 4000 4000 4000 4000 
 
 #-f1810f- ---- f1810f ---- -------------- f1810f ---------------- 
-driver f1810f nvidia 
+driver f1810f amdgpu 
 vlt f1810f 1000 1000 1000 1000 1000 
 pwr f1810f 7 7 7 7 7 7 
 mem f1810f 4200 4200 4200 4200 4200 
 miner f1810f ewbf-zcash 
 flg f1810f --cl-local-work 256 --cl-global-work 8192 --farm-recheck 200 
 fan f1810f 80 80 80 80 80 
+loc f1810f vvvvvv 
 
 #-0004f6- ---- 0004f6 ---- -------------- 0004f6 ---------------- 
 driver 0004f6 nvidia 
@@ -31,15 +34,15 @@ fan 0004f6 80 80 80 80 80 80
 reb 0004f6 3 
 
 #-claymore-zcash- -claymore-zcash- -------------- claymore-zcash ---------------- 
-claymore-zcash proxypool1 zec-us-west1.nanopool.org:6666 
-claymore-zcash proxypool2 zec-us-east1.nanopool.org:6666 
-claymore-zcash proxywallet t1gyHq8JpCLNF6Tqk6YwpbTq6hF3MTq5f9t 
-claymore-zcash poolpass1 x 
-claymore-zcash poolpass2 x 
+claymore-zcash=proxypool1 zec-us-west1.nanopool.org:6666 
+claymore-zcash=proxypool2 zec-us-east1.nanopool.org:6666 
+claymore-zcash=proxywallet t1gyHq8JpCLNF6Tqk6YwpbTq6hF3MTq5f9t 
+claymore-zcash=poolpass1 x 
+claymore-zcash=poolpass2 x 
 
 #-ewbf-zcash- -ewbf-zcash- -------------- ewbf-zcash ---------------- 
-ewbf-zcash proxypool1 zec-us-west1.nanopool.org:6666 
-ewbf-zcash proxypool2 zec-us-east1.nanopool.org:6666 
-ewbf-zcash proxywallet t1V8Q6qF7HEJShUCkGfk4rfTKzaJ1VnoMRD 
-ewbf-zcash poolpass1 x 
-ewbf-zcash poolpass2 x 
+ewbf-zcash=proxypool1 zec-us-west1.nanopool.org:6666 
+ewbf-zcash=proxypool2 zec-us-east1.nanopool.org:6666 
+ewbf-zcash=proxywallet t1V8Q6qF7HEJShUCkGfk4rfTKzaJ1VnoMRD 
+ewbf-zcash=poolpass1 x 
+ewbf-zcash=poolpass2 x 

@@ -1,0 +1,948 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"for",
+				"for\tfor …"
+			],
+			[
+				"glov",
+				"$globalFlags〔variable〕"
+			],
+			[
+				"po",
+				"poolValue"
+			],
+			[
+				"pool",
+				"poolKey2"
+			],
+			[
+				"miner",
+				"minerGroup"
+			],
+			[
+				"arrayz",
+				"$arrayzee〔variable〕"
+			],
+			[
+				"arrayzee",
+				"arrayzee1"
+			],
+			[
+				"resp",
+				"respArray"
+			],
+			[
+				"PRE",
+				"PREG_SET_ORDER〔constant〕"
+			],
+			[
+				"mat",
+				"matchArray"
+			],
+			[
+				"match",
+				"$matchArray〔variable〕"
+			],
+			[
+				"preg",
+				"preg_match〔function〕"
+			],
+			[
+				"SITE",
+				"SITE_URL"
+			],
+			[
+				"id",
+				"idValue"
+			],
+			[
+				"class",
+				"className\t: DOMString Element"
+			],
+			[
+				"onkey",
+				"onkeyup\tAttr"
+			],
+			[
+				"etho",
+				"$ethos_id〔variable〕"
+			],
+			[
+				"all",
+				"alldata"
+			],
+			[
+				"max",
+				"maxlength\tAttr"
+			],
+			[
+				"rig",
+				"rigstats"
+			],
+			[
+				"data",
+				"data-toggle"
+			],
+			[
+				"dat",
+				"data-toggle"
+			],
+			[
+				"settings",
+				"settings1.length"
+			],
+			[
+				"input",
+				"input-group"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"min",
+				"min-width"
+			],
+			[
+				"url",
+				"urlString"
+			],
+			[
+				"form",
+				"form-group"
+			],
+			[
+				"progress",
+				"progress-bar"
+			],
+			[
+				"inlin",
+				"inline"
+			],
+			[
+				"he",
+				"height\tAttr"
+			],
+			[
+				"text",
+				"text-center"
+			],
+			[
+				"bor",
+				"border"
+			],
+			[
+				"fig",
+				"figcaption\tTag"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"nav",
+				"navbar"
+			],
+			[
+				"zzc",
+				"zzc, zzco, zzcon, zzcons, zzconsole, zzconsole., zzconsole.log\tconsolelogvar"
+			],
+			[
+				"onload",
+				"onload\t: EventHandler FileReader"
+			],
+			[
+				"forloop",
+				"forloop,fl,forr,forl\tforloop"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"regex",
+				"regexString"
+			],
+			[
+				"quer",
+				"querySelector\t( selectors: DOMString ): Element (Selectors) Element"
+			],
+			[
+				"body",
+				"body\t: HTMLElement Document"
+			],
+			[
+				"console",
+				"console_log"
+			],
+			[
+				"alert",
+				"description-alert\tWindow"
+			],
+			[
+				"aler",
+				"alert〔function〕"
+			],
+			[
+				"num",
+				"num2"
+			],
+			[
+				"la",
+				"lastName"
+			],
+			[
+				"ba",
+				"background"
+			],
+			[
+				"func",
+				"function\t? "
+			],
+			[
+				"switch",
+				"switch〔keyword〕"
+			],
+			[
+				"add",
+				"add〔function〕"
+			],
+			[
+				"cont",
+				"const\t? "
+			],
+			[
+				"myC",
+				"myCanvas.width"
+			],
+			[
+				"draw",
+				"drawDots〔function〕"
+			],
+			[
+				"ct",
+				"ctx.stroke"
+			],
+			[
+				"c",
+				"ctx.lineTo"
+			],
+			[
+				"ctx",
+				"ctx.beginPath"
+			],
+			[
+				"scrip",
+				"script.js"
+			],
+			[
+				"mov",
+				"moveTo〔function〕"
+			],
+			[
+				"on",
+				"onloadFunction"
+			],
+			[
+				"scr",
+				"script\tTag"
+			],
+			[
+				"d",
+				"document"
+			],
+			[
+				"triang",
+				"triangleChaos"
+			],
+			[
+				"fill",
+				"fillColor〔variable〕"
+			],
+			[
+				"r",
+				"randY"
+			],
+			[
+				"rand",
+				"randY〔variable〕"
+			],
+			[
+				"co",
+				"console.log"
+			],
+			[
+				"ran",
+				"randNum〔variable〕"
+			],
+			[
+				"ra",
+				"randNum"
+			],
+			[
+				"rn",
+				"randX"
+			],
+			[
+				"scri",
+				"script"
+			],
+			[
+				"padding",
+				"padding"
+			],
+			[
+				"se",
+				"$sentence〔variable〕"
+			],
+			[
+				"met",
+				"meta\tTag"
+			],
+			[
+				"a",
+				"autocomplete\tAttr"
+			],
+			[
+				"my",
+				"myHeader"
+			],
+			[
+				"ge",
+				"get\tGet Elements"
+			],
+			[
+				"g",
+				"get\tGet Elements"
+			],
+			[
+				"l",
+				"lang\tAttr"
+			],
+			[
+				"v",
+				"value"
+			],
+			[
+				"auto",
+				"autofocus\tAttr"
+			],
+			[
+				"sub",
+				"submit"
+			],
+			[
+				"background",
+				"background"
+			],
+			[
+				"iss",
+				"isset"
+			],
+			[
+				"margi",
+				"margin"
+			],
+			[
+				"profile",
+				"profilepic_info"
+			],
+			[
+				"canva",
+				"canvasData"
+			],
+			[
+				"cross",
+				"crossprocess"
+			],
+			[
+				"sin",
+				"sincity"
+			],
+			[
+				"pleas",
+				"pleasant"
+			],
+			[
+				"oran",
+				"orangepeel"
+			],
+			[
+				"res",
+				"result"
+			],
+			[
+				"ht",
+				"htmlspecialchars"
+			],
+			[
+				"dele",
+				"deleted"
+			],
+			[
+				"album",
+				"album_description"
+			],
+			[
+				"session",
+				"session_destroy"
+			],
+			[
+				"username",
+				"usernameProfile"
+			],
+			[
+				"likes",
+				"total_likes"
+			],
+			[
+				"check",
+				"check_for_likes"
+			],
+			[
+				"userna",
+				"usernameProfile"
+			],
+			[
+				"flo",
+				"float"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"comp",
+				"companyProfile"
+			],
+			[
+				"fac",
+				"facebookOption"
+			],
+			[
+				"usr",
+				"username"
+			],
+			[
+				"php",
+				"php"
+			],
+			[
+				"user",
+				"username"
+			],
+			[
+				"dis",
+				"display"
+			],
+			[
+				"st",
+				"street"
+			],
+			[
+				"get",
+				"get_user_info"
+			],
+			[
+				"ADDRES",
+				"address"
+			],
+			[
+				"if",
+				"if\tif …"
+			],
+			[
+				"over",
+				"overflow"
+			],
+			[
+				"compa",
+				"company"
+			],
+			[
+				"com",
+				"companyProfile"
+			],
+			[
+				"copm",
+				"companyProfile"
+			],
+			[
+				"disc",
+				"discountStart"
+			],
+			[
+				"cat",
+				"category"
+			],
+			[
+				"ca",
+				"category"
+			],
+			[
+				"company",
+				"companyProfile"
+			],
+			[
+				"up",
+				"updateInfo"
+			],
+			[
+				"mys",
+				"mysql_query"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"p",
+				"placeholder\tAttr"
+			],
+			[
+				"activ",
+				"activities"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"in",
+				"inline-block"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 400.0,
+		"last_filter": "Package Control: ",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: List Packages"
+			],
+			[
+				"read",
+				"ReadmePlease"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"css",
+				"Set Syntax: CSS"
+			],
+			[
+				"prv",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Snippet: ",
+				"Snippet: for (…) {…}"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"reame",
+				"ReadmePlease"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"dele",
+				"File: Delete"
+			],
+			[
+				"readme",
+				"ReadmePlease"
+			],
+			[
+				"broswer",
+				"File: Open In Browser - Production Server"
+			],
+			[
+				"cc",
+				"Convert Case: Upper Case"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"ht",
+				"Set Syntax: HTML"
+			],
+			[
+				"jav",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"tern",
+				"tern_for_sublime: Enable Project"
+			],
+			[
+				"package control ins",
+				"Package Control: Install Package"
+			],
+			[
+				"j",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"java",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"htm",
+				"Set Syntax: HTML"
+			],
+			[
+				"JA",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"ph",
+				"Set Syntax: PHP"
+			],
+			[
+				"php",
+				"Set Syntax: PHP"
+			],
+			[
+				"js",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"htnl",
+				"HTML: Encode Special Characters"
+			],
+			[
+				"html\t",
+				"Set Syntax: HTML"
+			],
+			[
+				"plain",
+				"Set Syntax: Plain Text"
+			]
+		],
+		"width": 544.0
+	},
+	"console":
+	{
+		"height": 111.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/xampp/htdocs/jquery/index.php",
+		"/C/xampp/htdocs/RigSettings/upload.php",
+		"/C/Users/Hopi/Desktop/ethos-archive/ethos-readconf",
+		"/C/xampp/htdocs/test/index.php",
+		"/C/Users/Hopi/Desktop/ethos-archive/urlconfig",
+		"/C/Users/Hopi/Desktop/ethos-lib/ethos-stats-dump.php",
+		"/C/Users/Hopi/Desktop/ethos-lib/functions.php",
+		"/C/Users/Hopi/Desktop/ethos-lib/minerprocess.php",
+		"/C/Users/Hopi/Desktop/ethos-archive/ethos-config-daemon",
+		"/C/Users/Hopi/Desktop/ethos-lib/putconf.php",
+		"/C/xampp/htdocs/RigSettings/configFiles/config.txt",
+		"/C/xampp/htdocs/RigSettings/css/style.css",
+		"/C/Users/Hopi/Desktop/ethos-archive/gpulist.file",
+		"/C/Users/Hopi/Desktop/ethos-archive/panel.file",
+		"/C/Users/Hopi/Desktop/ethos-archive/stats.file",
+		"/C/Users/Hopi/Desktop/ethos-archive/browser",
+		"/C/xampp/htdocs/RigSettings/index.php",
+		"/C/Users/Hopi/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/Hopi/AppData/Roaming/Sublime Text 3/Packages/Default/Default (Windows).sublime-keymap",
+		"/C/xampp/htdocs/RigSettings/svg.php",
+		"/C/xampp/htdocs/RigSettings/inc/footer.php",
+		"/C/xampp/htdocs/petbar/profile.php",
+		"/C/xampp/htdocs/petbar/postForm.php",
+		"/C/xampp/htdocs/RigSettings/uploadForm.php",
+		"/C/xampp/htdocs/RigSettings/svg",
+		"/C/xampp/htdocs/petbar/albums.php",
+		"/C/xampp/htdocs/ethosDash/inc/topnav.php",
+		"/C/xampp/htdocs/ethosDash/welcome.php",
+		"/C/xampp/htdocs/ethosDash/bin/service.php",
+		"/C/xampp/htdocs/ethosDash/bin/service2.php",
+		"/C/xampp/htdocs/ethosDash/index.php",
+		"/C/xampp/htdocs/ethosDash/main.php",
+		"/C/xampp/htdocs/ethosDash/maintenance.php",
+		"/C/xampp/htdocs/ethosDash/error.php",
+		"/C/xampp/htdocs/ethosDash/debug2.php",
+		"/C/xampp/htdocs/ethosDash/debug.php",
+		"/C/xampp/htdocs/ethosDash/inc/head.php",
+		"/C/xampp/htdocs/ethosDash/inc/jQueryBootstrapCDNs.php",
+		"/C/xampp/htdocs/ethosDash/inc/loginFunction.php",
+		"/C/xampp/htdocs/ethosDash/inc/curl.php",
+		"/C/xampp/htdocs/ethosDash/inc/login.php",
+		"/C/xampp/htdocs/ethosDash/assets/css/style.css",
+		"/C/xampp/htdocs/ethosDash/inc/summary.php",
+		"/C/xampp/htdocs/ethosDash/inc/intro.php",
+		"/C/xampp/htdocs/ethosDash/inc/jumbotron.php",
+		"/C/xampp/htdocs/ethosDash/assets/js/script.js",
+		"/C/xampp/htdocs/RigSettings/js/script.js",
+		"/C/xampp/htdocs/ethosDash/miningRig-master/inc/footer.php",
+		"/D/teren work rip/appolo work rip/server rip teren/server rip teren/PetBar/inc/globalVariable.php",
+		"/D/teren work rip/appolo work rip/server rip teren/server rip teren/PetBar/inc/header.inc.php",
+		"/C/xampp/htdocs/petbar/inc/header.inc.php",
+		"/C/xampp/htdocs/ethosDash/assets/js/loginFunction.js",
+		"/C/xampp/htdocs/RigSettings/login.php",
+		"/C/xampp/htdocs/RigSettings/process.php",
+		"/C/xampp/htdocs/RigSettings/curl.php",
+		"/C/xampp/htdocs/RigSettings/logout.php",
+		"/C/xampp/htdocs/RigSettings/inc/header.php",
+		"/C/xampp/htdocs/RigSettings/inc/jumbotron.php",
+		"/C/xampp/htdocs/New folder (2)/jquery-ui-1.12.1.custom/jquery-ui.css",
+		"/C/xampp/htdocs/alexMiningRig/miningRig-SoftBytes-Change-1/js/script.js",
+		"/C/xampp/htdocs/linuxDoc.txt",
+		"/C/xampp/htdocs/RigSettings/.htaccess",
+		"/C/xampp/htdocs/bootstrap4/index.php",
+		"/C/xampp/htdocs/bootstrap4/login.php",
+		"/C/xampp/htdocs/alexMiningRig/miningRig-SoftBytes-Change-1/index.php",
+		"/C/xampp/htdocs/bootstrap4/new/index.php",
+		"/C/xampp/htdocs/bootstrap4/index.htm",
+		"/C/xampp/htdocs/alexMiningRig/miningRig-SoftBytes-Change-1/process.php",
+		"/C/xampp/htdocs/RigSettings/.gitignore",
+		"/C/Users/Hopi/AppData/Roaming/Sublime Text 3/Packages/Emmet/README.md",
+		"/C/xampp/htdocs/chaosTheory/index.php",
+		"/C/xampp/htdocs/chaosTheory/css/style.css",
+		"/C/xampp/htdocs/chaosTheory/css/cover.css",
+		"/C/Users/Hopi/AppData/Roaming/Sublime Text 3/Packages/User/ColorPicker.sublime-settings",
+		"/C/Users/Hopi/AppData/Roaming/Sublime Text 3/Packages/ColorPicker/ColorPicker.sublime-settings",
+		"/C/Users/Hopi/AppData/Roaming/Sublime Text 3/Packages/ColorPicker/README.md",
+		"/C/Users/Hopi/AppData/Roaming/Sublime Text 3/Packages/Browser Refresh/Default (Windows).sublime-keymap",
+		"/C/Users/Hopi/AppData/Roaming/Sublime Text 3/Packages/User/openinbrowser.sublime-settings",
+		"/C/Users/Hopi/AppData/Roaming/Sublime Text 3/Packages/Browser Refresh/README.md",
+		"/C/xampp/htdocs/bootstrap4/assets/bg.jpg.crdownload",
+		"/C/xampp/htdocs/bootstrap4/assets/shark.jpg",
+		"/C/xampp/htdocs/bootstrap4/css/style.css",
+		"/C/xampp/htdocs/bootstrap4/js/script.js",
+		"/C/xampp/htdocs/bootstrap4/assets/awesomeTriangleWP.png",
+		"/C/Users/Hopi/AppData/Roaming/Sublime Text 3/Packages/User/alertvar.sublime-snippet",
+		"/C/Users/Hopi/AppData/Roaming/Sublime Text 3/Packages/User/consolelogvar.sublime-snippet",
+		"/C/Users/Hopi/AppData/Roaming/Sublime Text 3/Packages/User/htmlTemplate.sublime-snippet",
+		"/C/xampp/htdocs/js/index33.php",
+		"/C/Users/Hopi/AppData/Roaming/Sublime Text 3/Packages/User/bootstrap4.sublime-snippet",
+		"/C/Users/Hopi/AppData/Roaming/Sublime Text 3/Packages/User/bootstrap.sublime-snippet",
+		"/C/Users/Hopi/AppData/Roaming/Sublime Text 3/Packages/User/consolelog.sublime-snippet",
+		"/C/Users/Hopi/AppData/Roaming/Sublime Text 3/Packages/User/alert.sublime-snippet",
+		"/C/Users/Hopi/AppData/Roaming/Sublime Text 3/Packages/User/onload.sublime-snippet",
+		"/C/Users/Hopi/AppData/Roaming/Sublime Text 3/Packages/User/mySnippets.sublime-snippet",
+		"/C/xampp/htdocs/js/snippitTest.php",
+		"/C/xampp/htdocs/js/script.js",
+		"/C/xampp/htdocs/js/index10.htm",
+		"/C/xampp/htdocs/clone/css/style.css",
+		"/C/xampp/htdocs/js/index1.php",
+		"/C/Users/Hopi/AppData/Roaming/Sublime Text 3/Packages/User/resetcss.sublime-snippet",
+		"/C/xampp/htdocs/clone/js/script.js",
+		"/C/xampp/htdocs/js/css/style.css",
+		"/C/xampp/htdocs/js/css/stylez",
+		"/C/Users/Hopi/AppData/Roaming/Sublime Text 3/Packages/LaTeX/Snippets/section-..-(section).sublime-snippet",
+		"/C/Users/Hopi/AppData/Roaming/Sublime Text 3/Packages/JavaScript Completions/sublime-completions/description-URL.sublime-settings",
+		"/C/Users/Hopi/AppData/Roaming/Sublime Text 3/Packages/JavaScript/Snippets/for-()-{}-(faster).sublime-snippet",
+		"/C/Users/Hopi/AppData/Roaming/Sublime Text 3/Packages/JavaScript/Snippets/for-()-{}.sublime-snippet",
+		"/C/Users/Hopi/AppData/Roaming/Sublime Text 3/Packages/JavaScript/Snippets/Object-Value-JS.sublime-snippet",
+		"/C/Users/Hopi/AppData/Roaming/Sublime Text 3/Packages/JavaScript/Snippets/Object-Method.sublime-snippet",
+		"/C/Users/Hopi/AppData/Roaming/Sublime Text 3/Packages/JavaScript/Snippets/Get-Elements.sublime-snippet",
+		"/C/Users/Hopi/AppData/Roaming/Sublime Text 3/Packages/JavaScript/Regular Expressions (JavaScript).sublime-syntax",
+		"/C/Users/Hopi/AppData/Roaming/Sublime Text 3/Packages/JavaScript/JavaScript.sublime-syntax",
+		"/C/Users/Hopi/AppData/Roaming/Sublime Text 3/Packages/JavaScript/Snippets/if-___-else.sublime-snippet",
+		"/C/Users/Hopi/AppData/Roaming/Sublime Text 3/Packages/User/forloop.sublime-snippet",
+		"/C/Users/Hopi/AppData/Roaming/Sublime Text 3/Packages/User/View In Browser.sublime-settings",
+		"/C/xampp/htdocs/js/2.html",
+		"/C/Users/Hopi/AppData/Roaming/Sublime Text 3/Packages/View In Browser/View In Browser.sublime-settings",
+		"/C/xampp/htdocs/clone/index.php",
+		"/C/Users/Hopi/AppData/Roaming/Sublime Text 3/Packages/SideBarEnhancements/Side Bar.sublime-settings",
+		"/C/Users/Hopi/AppData/Roaming/Sublime Text 3/Packages/User/Side Bar.sublime-settings",
+		"/C/xampp/htdocs/js/html",
+		"/C/xampp/htdocs/js/new",
+		"/C/Users/Hopi/AppData/Roaming/Sublime Text 3/Packages/SideBarEnhancements/readme.md",
+		"/C/xampp/htdocs/petbar 9/Exercise Files/view_photo.php",
+		"/C/xampp/htdocs/newest from home 14nov/petbar/pet_info.php",
+		"/C/xampp/htdocs/newest from home 14nov/petbar/profile.php",
+		"/C/xampp/htdocs/newest from home 14nov/petbar/profileMerchant.php",
+		"/C/xampp/htdocs/newest from home 14nov/petbar/inc/header.inc.php"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 109.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": false,
+		"use_buffer2": false,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 22.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 124.0
+	},
+	"pinned_build_system": "",
+	"project": "upload.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"script",
+				"clone\\js\\script.js"
+			],
+			[
+				"js",
+				"js\\index.js"
+			],
+			[
+				"",
+				"C:\\Users\\Hopi\\Desktop\\website for teren group\\AFR WP THEME 2.64\\footer.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 400.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 626.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 293.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

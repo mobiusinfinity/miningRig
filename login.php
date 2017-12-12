@@ -9,7 +9,7 @@
           <label for="id" class="sr-only">Ethos ID</label>
           <div class="inner-addon right-addon">
             <i id="spinner" class="fa fa-spinner text-primary" aria-hidden="true"></i>
-            <input type="text" id="id" name="id" class="form-control" placeholder="Ethos ID" minlength="6" maxlength="6" required autofocus>
+            <input type="text" id="id" name="id" class="form-control" placeholder="Ethos ID" minlength="6" maxlength="6" onfocus="placeholder" required autofocus>
           </div>
           <button id="submit" class="btn btn-lg btn-primary btn-block mt-2" type="submit" disabled>Sign in</button>
         </div>
